@@ -1,0 +1,13 @@
+.active {
+  color: var(--blue-color);
+
+  &::after {
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: var(--blue-color);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1px;
+  }
+}

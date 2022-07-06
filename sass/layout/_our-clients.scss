@@ -1,0 +1,25 @@
+.client__link {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--icon-color-gray);
+  border-radius: 4px;
+  fill: var(--icon-color-gray);
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-func-cubic);
+  transition-property: border-color, fill;
+
+  &:hover,
+  &:focus {
+    fill: var(--blue-color);
+    border-color: var(--blue-color);
+  }
+}
+
+.client__list {
+  --count-card: 6;
+}

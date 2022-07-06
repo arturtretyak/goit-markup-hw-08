@@ -1,0 +1,23 @@
+.address {
+  font-style: normal;
+  color: var(--half-transparent-color);
+
+  &--company {
+    color: white;
+  }
+}
+
+.list-address li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.address__link {
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-func-cubic);
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: var(--blue-color);
+  }
+}

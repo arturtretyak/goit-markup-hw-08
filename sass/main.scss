@@ -1,0 +1,30 @@
+@import "./utils/variables.scss";
+@import "./utils/_reset.scss";
+@import "./utils/mixin.scss";
+
+@import "./base/card-set.scss";
+@import "./base/common.scss";
+@import "./base/container.scss";
+@import "./base/section.scss";
+
+@import "./components/constructor-social.scss";
+@import "./components/check-privacy.scss";
+@import "./components/close-button.scss";
+@import "./components/button.scss";
+@import "./components/active-site";
+@import "./components/footer-form";
+@import "./components/logo";
+@import "./components/menu-filter";
+@import "./components/modal";
+@import "./components/navigation";
+@import "./components/contacts";
+
+@import "./layout/adress";
+@import "./layout/benefits";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/our-clients";
+@import "./layout/our-team";
+@import "./layout/table-projects";
+@import "./layout/work";

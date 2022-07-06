@@ -1,0 +1,25 @@
+.nav-menu {
+  color: var(--black-color);
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav-menu__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-func-cubic);
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: var(--blue-color);
+  }
+}
