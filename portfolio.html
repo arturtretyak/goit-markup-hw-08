@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <div class="container container--header">
-        <a href="./index.html" class="link logo"
+        <a href="./index.html" class="link logo header-logo"
           >Web<span class="logo logo--black">Studio</span></a
         >
         <nav>
@@ -59,6 +59,77 @@
             </a>
           </li>
         </ul>
+
+        <button type="button" class="mobile-menu__icon" data-menu-open>
+          <svg class="nav-menu__mob" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu is-hidden" data-menu>
+          <div class="mobile-menu__block">
+            <button
+              type="button"
+              class="mobile-menu__close-icon"
+              data-menu-close
+            >
+              <svg class="" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="list mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="link mobile-menu__link">Студія</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="link active mobile-menu__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="" class="link mobile-menu__link">Контакти</a>
+              </li>
+            </ul>
+            <div class="mobile-menu__contacts">
+              <ul class="list">
+                <li>
+                  <a href="tel:+380961111111" class="link mobile-menu--tel">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="link mobile-menu--mail"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="list mobile-menu__social-list">
+                <li class="social-list__item">
+                  <a href="" class="link" rel="noreferrer noopener nofollow"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="social-list__item">
+                  <a href="" class="link" rel="noreferrer noopener nofollow"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="social-list__item">
+                  <a href="" class="link" rel="noreferrer noopener nofollow"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="social-list__item">
+                  <a href="" class="link" rel="noreferrer noopener nofollow"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -95,8 +166,7 @@
                   <img
                     src="./images/img-project-1.jpg"
                     alt="Технокряк"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -124,8 +194,7 @@
                   <img
                     src="./images/img-project-2.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -155,8 +224,7 @@
                   <img
                     src="./images/img-project-3.jpg"
                     alt="Ресторан Seafood"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -184,8 +252,7 @@
                   <img
                     src="./images/img-project-4.jpg"
                     alt="Проект Prime"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -213,8 +280,7 @@
                   <img
                     src="./images/img-project-5.jpg"
                     alt="Проект Boxes"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -242,8 +308,7 @@
                   <img
                     src="./images/img-project-6.jpg"
                     alt="Inspiration has no Border"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -273,8 +338,7 @@
                   <img
                     src="./images/img-project-7.jpg"
                     alt="Видавництво Limited Edition"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -304,8 +368,7 @@
                   <img
                     src="./images/img-project-8.jpg"
                     alt="Проект LAB"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -333,8 +396,7 @@
                   <img
                     src="./images/img-project-9.jpg"
                     alt="Growing Business"
-                    width="370"
-                    height="295"
+                    class="thumb-description__img"
                   />
                   <div class="project-description">
                     <p class="project-description-content">
@@ -462,5 +524,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

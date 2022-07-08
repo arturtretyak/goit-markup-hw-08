@@ -20,6 +20,7 @@ body {
 }
 
 .is-hidden {
+  position: absolute;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;

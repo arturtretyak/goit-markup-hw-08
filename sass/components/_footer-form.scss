@@ -1,5 +1,13 @@
 .form-email {
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+
+  @include device(tab-only) {
+    flex-direction: column;
+  }
 }
 
 .email-form-input {
@@ -13,8 +21,16 @@
   border-radius: 4px;
 
   padding-left: 15px;
-
   margin-right: 10px;
+  margin-bottom: 20px;
+
+  @include device(tab-only) {
+    width: 450px;
+  }
+
+  @include device(desk) {
+    margin-bottom: 0;
+  }
 }
 
 .email-form::placeholder {

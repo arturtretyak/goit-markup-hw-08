@@ -6,8 +6,10 @@
     margin-right: 10px;
   }
 
-  &__item:not(:first-child) {
-    margin-left: 50px;
+  @include device(desktop) {
+    &__item:not(:first-child) {
+      margin-left: 50px;
+    }
   }
 }
 
@@ -22,6 +24,12 @@
   transition-timing-function: var(--time-func-cubic);
   transition-property: color;
 
+  @include device(tab-only) {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   &:hover,
   &:focus {
     fill: var(--blue-color);
@@ -32,4 +40,26 @@
 .contacts-header-items {
   display: flex;
   margin-left: auto;
+  @include device(mob-only) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
+  @include device(tab-only) {
+    flex-direction: column;
+  }
+}
+
+.contacts-header__content:last-child {
+  @include device(desk) {
+    margin-left: 30px;
+  }
 }

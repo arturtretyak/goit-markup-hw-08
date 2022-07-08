@@ -5,6 +5,11 @@
   &__item:not(:last-child) {
     margin-right: 50px;
   }
+
+  @include device(mob-only) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .nav-menu__link {

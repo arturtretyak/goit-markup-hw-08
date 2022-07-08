@@ -1,12 +1,36 @@
 .project {
-  &__item {
-    width: 370px;
-    height: 405px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  @include device(tab) {
+    --count-card: 2;
+    flex-direction: row;
+    &__item:nth-child(odd) {
+      margin-left: 25px;
+    }
+  }
+
+  @include device(desk) {
+    --count-card: 3;
   }
 }
 
 .link__project {
   display: block;
+
+  @include device(mob) {
+    width: 450px;
+  }
+
+  @include device(tab) {
+    width: 355px;
+  }
+
+  @include device(desk) {
+    width: 370px;
+  }
+
   transition-duration: 250ms;
   transition-timing-function: var(--time-func-cubic);
   transition-property: box-shadow;
@@ -57,6 +81,10 @@
 .thumb-description {
   position: relative;
   overflow: hidden;
+
+  &__img {
+    width: 100%;
+  }
 }
 
 .link__project:hover .project-description,

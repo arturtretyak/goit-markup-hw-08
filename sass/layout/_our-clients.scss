@@ -13,6 +13,11 @@
   transition-timing-function: var(--time-func-cubic);
   transition-property: border-color, fill;
 
+  @include device(tab-only) {
+    width: 225px;
+    height: 90px;
+  }
+
   &:hover,
   &:focus {
     fill: var(--blue-color);
@@ -22,4 +27,6 @@
 
 .client__list {
   --count-card: 6;
+  display: flex;
+  justify-content: center;
 }

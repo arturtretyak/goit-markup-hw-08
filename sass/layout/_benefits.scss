@@ -1,4 +1,14 @@
 .benefits {
+  &__list {
+    @include device(tab) {
+      --count-card: 2;
+    }
+
+    @include device(desk) {
+      --count-card: 4;
+    }
+  }
+
   &__title {
     font-size: 14px;
     font-weight: 700;
@@ -6,7 +16,15 @@
     text-transform: uppercase;
     color: var(--black-color);
 
+    display: flex;
+    justify-content: center;
+
     margin-bottom: 10px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
   }
 }
 

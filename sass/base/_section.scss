@@ -1,6 +1,11 @@
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @include device(desk) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 
   &__title {
     font-weight: 700;
@@ -10,5 +15,9 @@
     letter-spacing: 0.03em;
     color: var(--black-color);
     margin-bottom: 50px;
+
+    @include device(tab) {
+      margin-bottom: 30px;
+    }
   }
 }

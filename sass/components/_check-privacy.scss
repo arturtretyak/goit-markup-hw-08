@@ -3,6 +3,14 @@
   margin-bottom: 30px;
 }
 
+.privacy__text {
+  font-size: 12px;
+
+  @include device(desk) {
+    font-size: 14px;
+  }
+}
+
 .privacy__check {
   left: 25px;
   top: 25px;

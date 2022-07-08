@@ -4,11 +4,17 @@
   padding-bottom: 60px;
 
   &-item:not(:last-child) {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @include device(tab) {
+      margin-right: 70px;
+    }
   }
 
   &-item:last-child {
-    margin-left: auto;
+    @include device(desk) {
+      margin-left: auto;
+    }
   }
 
   &-item__title {
@@ -23,7 +29,20 @@
 
   &-display {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include device(tab) {
+      align-items: baseline;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include device(desk) {
+      text-align: left;
+    }
   }
 
   &--soc-link {
