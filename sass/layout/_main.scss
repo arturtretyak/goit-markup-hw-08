@@ -31,6 +31,16 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/main_background.png);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/main_background-2x.jpg);
+    }
+
     background-size: 1600px 600px;
     padding-top: 200px;
     padding-bottom: 200px;

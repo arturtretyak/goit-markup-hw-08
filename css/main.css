@@ -858,6 +858,11 @@ body {
     padding-bottom: 200px;
   }
 }
+@media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .main-banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main_background-2x.jpg);
+  }
+}
 
 .main__text {
   font-weight: 900;
