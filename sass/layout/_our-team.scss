@@ -58,16 +58,17 @@
 }
 
 .team__img {
-  width: 450px;
-  height: 460px;
+  width: 100%;
+  // width: 450px;
+  // height: 460px;
 
-  @include device(tab) {
-    width: 355px;
-    height: 375px;
-  }
+  // @include device(tab) {
+  //   max-width: 355px;
+  //   // height: 375px;
+  // }
 
-  @include device(desk) {
-    width: 270px;
-    height: 260px;
-  }
+  // @include device(desk) {
+  //   max-width: 270px;
+  //   // height: 260px;
+  // }
 }

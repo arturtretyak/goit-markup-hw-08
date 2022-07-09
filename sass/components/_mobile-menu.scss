@@ -12,6 +12,20 @@
     transition-timing-function: var(--time-func-cubic);
     transition-property: opacity, transform;
   }
+
+  @include device(tab) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
   &.is-open {
     transform: translateX(0);
   }
@@ -64,6 +78,8 @@
 
 .mobile-menu__social-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .social-list__item {
@@ -77,7 +93,7 @@
 .social-list__item:not(:last-child) {
   &::after {
     content: "";
-    margin: 0 10px;
+    margin-left: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
   }

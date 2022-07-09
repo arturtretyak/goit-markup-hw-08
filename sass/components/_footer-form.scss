@@ -11,7 +11,7 @@
 }
 
 .email-form-input {
-  width: 360px;
+  width: 90%;
   height: 50px;
   background-color: transparent;
 
@@ -24,9 +24,13 @@
   margin-right: 10px;
   margin-bottom: 20px;
 
-  @include device(tab-only) {
+  @include device(mob) {
     width: 450px;
   }
+
+  // @include device(tab-only) {
+  //   width: 450px;
+  // }
 
   @include device(desk) {
     margin-bottom: 0;
