@@ -8,6 +8,11 @@
   @include device(tab-only) {
     flex-direction: column;
   }
+
+  @include device(desk) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 .email-form-input {

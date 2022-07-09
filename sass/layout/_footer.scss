@@ -42,6 +42,7 @@
 
     @include device(desk) {
       text-align: left;
+      flex-wrap: nowrap;
     }
   }
 

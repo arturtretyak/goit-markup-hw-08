@@ -445,6 +445,12 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 1200px) {
+  .form-email {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 
 .email-form-input {
   width: 90%;
@@ -847,6 +853,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-display {
     text-align: left;
+    flex-wrap: nowrap;
   }
 }
 .footer--soc-link {
