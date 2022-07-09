@@ -6,12 +6,15 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    transform: translateX(100%);
     background-color: var(--white-color);
     transition-duration: 250ms;
     transition-timing-function: var(--time-func-cubic);
-    transition-property: opacity;
+    transition-property: opacity, transform;
   }
-
+  &.is-open {
+    transform: translateX(0);
+  }
   &__block {
     // margin-top: 50px;
     // margin-left: 40px;
