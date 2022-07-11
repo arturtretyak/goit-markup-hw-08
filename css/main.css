@@ -31,6 +31,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .card-set {
@@ -130,11 +132,11 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section__title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 
@@ -144,6 +146,12 @@ body {
     left: 0;
     position: fixed;
     z-index: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     transform: translateX(100%);
@@ -170,12 +178,6 @@ body {
 .mobile-menu.is-open {
   transform: translateX(0);
 }
-.mobile-menu__block {
-  margin: 50px 40px;
-}
-.mobile-menu__list {
-  position: relative;
-}
 .mobile-menu__item {
   font-weight: 500;
   font-size: 40px;
@@ -183,25 +185,25 @@ body {
   letter-spacing: 0.02em;
   color: var(--black-color);
 }
-.mobile-menu__item:not(:last-child) {
+.mobile-menu__item {
   margin-bottom: 30px;
 }
-.mobile-menu__contacts {
-  position: absolute;
-  bottom: 50px;
+.mobile-menu__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
 }
 .mobile-menu--tel {
   display: block;
   font-size: 34px;
   line-height: 1.1764705882;
   color: var(--blue-color);
-  margin-bottom: 30px;
 }
 .mobile-menu--mail {
   display: block;
   font-size: 24px;
   line-height: 1.1666666667;
-  margin-bottom: 65px;
 }
 
 .mobile-menu__social-list {
@@ -472,6 +474,7 @@ body {
 @media screen and (min-width: 1200px) {
   .email-form-input {
     margin-bottom: 0;
+    width: 360px;
   }
 }
 
@@ -519,17 +522,13 @@ body {
   justify-content: center;
   margin-bottom: 50px;
   flex-wrap: wrap;
+  gap: 15px 10px;
 }
 @media screen and (max-width: 767.98px) {
   .filter {
     justify-content: flex-start;
   }
 }
-.filter__item:not(:last-child) {
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
 .filter__button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -573,13 +572,24 @@ body {
   padding: 40px;
   opacity: 1;
   position: relative;
-  width: 530px;
+  width: 100%;
+  max-width: 450px;
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 625px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition-duration: 250ms;
   transition-timing-function: var(--time-func-cubic);
   transition-property: opacity, visibility, transform;
+}
+@media screen and (min-width: 1200px) {
+  .order-form-block {
+    overflow: hidden;
+    max-width: 530px;
+    max-height: 580px;
+  }
 }
 .order-form-block__title {
   font-size: 20px;
@@ -784,6 +794,11 @@ body {
   justify-content: center;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    justify-content: flex-start;
+  }
+}
 .benefits__text {
   display: flex;
   justify-content: center;
@@ -925,17 +940,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-width: 700px;
+  max-width: 360px;
 }
 @media screen and (min-width: 1200px) {
   .main__text {
     font-size: 44px;
     line-height: 1.3636363636;
+    max-width: 700px;
   }
 }
 
 .client__link {
-  width: 170px;
   height: 90px;
   display: flex;
   justify-content: center;
@@ -959,9 +974,17 @@ body {
 }
 
 .client__list {
-  --count-card: 6;
-  display: flex;
-  justify-content: center;
+  --count-card: 2;
+}
+@media screen and (min-width: 768px) {
+  .client__list {
+    --count-card: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__list {
+    --count-card: 6;
+  }
 }
 
 .team {
@@ -976,10 +999,6 @@ body {
   .team {
     --count-card: 4;
   }
-}
-.team__list {
-  display: flex;
-  justify-content: center;
 }
 .team__title, .team__description {
   font-size: 16px;
@@ -1012,28 +1031,14 @@ body {
     margin-left: 15px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .card__employer {
-    max-width: 270px;
-  }
-}
-
 .team__img {
   width: 100%;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
 @media screen and (min-width: 768px) {
   .project {
     --count-card: 2;
     flex-direction: row;
-  }
-  .project__item:nth-child(odd) {
-    margin-left: 25px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1043,25 +1048,12 @@ body {
 }
 
 .link__project {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-duration: 250ms;
   transition-timing-function: var(--time-func-cubic);
   transition-property: box-shadow;
-}
-@media screen and (min-width: 480px) {
-  .link__project {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .link__project {
-    width: 355px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .link__project {
-    width: 370px;
-  }
 }
 .link__project:hover, .link__project:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1070,6 +1062,7 @@ body {
 .project-content {
   padding: 20px 25px;
   border: solid 1px #ececec;
+  flex-grow: 1;
 }
 .project-content__title {
   font-size: 18px;
@@ -1088,15 +1081,27 @@ body {
   line-height: 1.5555555556;
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--white-color);
+  opacity: 0;
+  overflow: auto;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 60px 25px;
+  padding: 75px 25px;
   transform: translateY(100%);
   transition-duration: 250ms;
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-timing-function: var(--time-func-cubic);
+}
+@media screen and (min-width: 768px) {
+  .project-description {
+    padding: 50px 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-description {
+    padding: 60px 25px;
+  }
 }
 
 .thumb-description {
@@ -1109,6 +1114,7 @@ body {
 
 .link__project:hover .project-description,
 .link__project:focus .project-description {
+  opacity: 1;
   transform: translateY(0);
 }
 
@@ -1130,7 +1136,7 @@ body {
   }
 }
 .work__list {
-  --count-card: 4;
+  --count-card: 3;
 }
 .work__item {
   position: relative;

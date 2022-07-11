@@ -1,5 +1,5 @@
 .client__link {
-  width: 170px;
+  //width: 170px;
   height: 90px;
   display: flex;
   justify-content: center;
@@ -26,7 +26,13 @@
 }
 
 .client__list {
-  --count-card: 6;
-  display: flex;
-  justify-content: center;
+  --count-card: 2;
+
+  @include device(tab) {
+    --count-card: 3;
+  }
+
+  @include device(desk) {
+    --count-card: 6;
+  }
 }

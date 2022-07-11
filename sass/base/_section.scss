@@ -14,10 +14,10 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--black-color);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    @include device(tab) {
-      margin-bottom: 30px;
+    @include device(desk) {
+      margin-bottom: 50px;
     }
   }
 }

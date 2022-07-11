@@ -81,10 +81,11 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-width: 700px;
+  max-width: 360px;
 
   @include device(desk) {
     font-size: 44px;
     line-height: calc(60 / 44);
+    max-width: 700px;
   }
 }

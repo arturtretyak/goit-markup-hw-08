@@ -68,70 +68,64 @@
           </svg>
         </button>
         <div class="mobile-menu" data-menu>
-          <div class="mobile-menu__block">
-            <button
-              type="button"
-              class="mobile-menu__close-icon"
-              data-menu-close
-            >
-              <svg class="" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
-            <ul class="list mobile-menu__list">
-              <li class="mobile-menu__item">
-                <a href="./index.html" class="link active mobile-menu__link"
-                  >Студія</a
-                >
+          <button type="button" class="mobile-menu__close-icon" data-menu-close>
+            <svg class="" width="40px" height="40px">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="link active mobile-menu__link"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="link mobile-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="link mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
+          <div class="mobile-menu__contacts">
+            <ul class="list mobile-menu__contacts-list">
+              <li>
+                <a href="tel:+380961111111" class="link mobile-menu--tel">
+                  +38 096 111 11 11
+                </a>
               </li>
-              <li class="mobile-menu__item">
-                <a href="./portfolio.html" class="link mobile-menu__link"
-                  >Портфоліо</a
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="link mobile-menu--mail"
                 >
-              </li>
-              <li class="mobile-menu__item">
-                <a href="" class="link mobile-menu__link">Контакти</a>
+                  info@devstudio.com
+                </a>
               </li>
             </ul>
-            <div class="mobile-menu__contacts">
-              <ul class="list">
-                <li>
-                  <a href="tel:+380961111111" class="link mobile-menu--tel">
-                    +38 096 111 11 11
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:info@devstudio.com"
-                    class="link mobile-menu--mail"
-                  >
-                    info@devstudio.com
-                  </a>
-                </li>
-              </ul>
-              <ul class="list mobile-menu__social-list">
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Instagram</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Twitter</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Facebook</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >LinkedIn</a
-                  >
-                </li>
-              </ul>
-            </div>
+            <ul class="list mobile-menu__social-list">
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -208,33 +202,63 @@
           <h2 class="section__title">Чим ми займаемося</h2>
           <ul class="list card-set work__list">
             <li class="card-item work__item">
-              <img
-                srcset="./images/work1@2x.jpg 2x"
-                src="./images/img-what-we-do-1.jpg"
-                alt="Робота з кодом"
-                width="370"
-                height="295"
-              />
+              <picture>
+                <source
+                  srcset="./images/work1.webp 1x, ./images/work1@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/work1.jpg 1x, ./images/work1@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work1.jpg"
+                  alt="Робота з кодом"
+                  width="370"
+                  height="295"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="work__text">Десктопні додатки</h3>
             </li>
             <li class="card-item work__item">
-              <img
-                srcset="./images/work2@2x.jpg 2x"
-                src="./images/img-what-we-do-2.jpg"
-                alt="Маркетинг"
-                width="370"
-                height="295"
-              />
+              <picture>
+                <source
+                  srcset="./images/work2.webp 1x, ./images/work2@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/work2.jpg 1x, ./images/work2@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work2.jpg"
+                  alt="Маркетинг"
+                  width="370"
+                  height="295"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="work__text">Мобільні додатки</h3>
             </li>
             <li class="card-item work__item">
-              <img
-                srcset="./images/work3@2x.jpg 2x"
-                src="./images/img-what-we-do-3.jpg"
-                alt="Графіка"
-                width="370"
-                height="295"
-              />
+              <picture>
+                <source
+                  srcset="./images/work3.webp 1x, ./images/work3@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/work3.jpg 1x, ./images/work3@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work3.jpg"
+                  alt="Графіка"
+                  width="370"
+                  height="295"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="work__text">Дизайнерські рішення</h3>
             </li>
           </ul>
@@ -245,17 +269,20 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="list card-set team__list">
             <li class="card-item card__employer">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/employer-mobile-1.jpg  480w,
-                  ./images/employer-tab-1.jpg     768w,
-                  ./images/img-employer-1.jpg    1200w
-                "
-                sizes="(min-width: 1200px) 250px, (min-width: 768px) 350px, (min-width: 480px) 450px"
-                src="./images/employer-mobile-1.jpg"
-                alt="Співробітник Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employer-mobile-1.jpg    1x,
+                    ./images/employer-mobile-1@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/employer-mobile-1.jpg"
+                  alt="Співробітник Игорь Демьяненко"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Игор Демьяненко</h3>
                 <p class="team__description" lang="en">Product Designer</p>
@@ -312,17 +339,20 @@
               </div>
             </li>
             <li class="card-item card__employer">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/employer-mobile-2.jpg  480w,
-                  ./images/employer-tab-2.jpg     768w,
-                  ./images/img-employer-2.jpg    1200w
-                "
-                sizes="(min-width: 1200px) 250px, (min-width: 768px) 350px, (min-width: 480px) 450px"
-                src="./images/employer-mobile-2.jpg"
-                alt="Співробітник Ольга Репина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employer-mobile-2.jpg    1x,
+                    ./images/employer-mobile-2@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/employer-mobile-2.jpg"
+                  alt="Співробітник Ольга Репина"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Ольга Рєпина</h3>
                 <p class="team__description" lang="en">Frontend Developer</p>
@@ -379,17 +409,20 @@
               </div>
             </li>
             <li class="card-item card__employer">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/employer-mobile-3.jpg  480w,
-                  ./images/employer-tab-3.jpg     768w,
-                  ./images/img-employer-3.jpg    1200w
-                "
-                sizes="(min-width: 1200px) 250px, (min-width: 768px) 350px, (min-width: 480px) 450px"
-                src="./images/employer-mobile-3.jpg"
-                alt="Співробітник Микола Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employer-mobile-3.jpg    1x,
+                    ./images/employer-mobile-3@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/employer-mobile-3.jpg"
+                  alt="Співробітник Микола Тарасов"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__description" lang="en">Marketing</p>
@@ -446,17 +479,20 @@
               </div>
             </li>
             <li class="card-item card__employer">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/employer-mobile-4.jpg  480w,
-                  ./images/employer-tab-4.jpg     768w,
-                  ./images/img-employer-4.jpg    1200w
-                "
-                sizes="(min-width: 1200px) 250px, (min-width: 768px) 350px, (min-width: 480px) 450px"
-                src="./images/employer-mobile-4.jpg"
-                alt="Співробітник Михайло Ермаков"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employer-mobile-4.jpg    1x,
+                    ./images/employer-mobile-4@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/employer-mobile-4.jpg"
+                  alt="Співробітник Михайло Ермаков"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__title">Михайло Ермаков</h3>
                 <p class="team__description" lang="en">UI Designer</p>

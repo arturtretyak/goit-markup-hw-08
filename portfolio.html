@@ -66,68 +66,62 @@
           </svg>
         </button>
         <div class="mobile-menu is-hidden" data-menu>
-          <div class="mobile-menu__block">
-            <button
-              type="button"
-              class="mobile-menu__close-icon"
-              data-menu-close
-            >
-              <svg class="" width="40px" height="40px">
-                <use href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
-            <ul class="list mobile-menu__list">
-              <li class="mobile-menu__item">
-                <a href="./index.html" class="link mobile-menu__link">Студія</a>
+          <button type="button" class="mobile-menu__close-icon" data-menu-close>
+            <svg class="" width="40px" height="40px">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="link mobile-menu__link">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="link active mobile-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="link mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
+          <div class="mobile-menu__contacts">
+            <ul class="list mobile-menu__contacts-list">
+              <li>
+                <a href="tel:+380961111111" class="link mobile-menu--tel">
+                  +38 096 111 11 11
+                </a>
               </li>
-              <li class="mobile-menu__item">
-                <a href="./portfolio.html" class="link active mobile-menu__link"
-                  >Портфоліо</a
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="link mobile-menu--mail"
                 >
-              </li>
-              <li class="mobile-menu__item">
-                <a href="" class="link mobile-menu__link">Контакти</a>
+                  info@devstudio.com
+                </a>
               </li>
             </ul>
-            <div class="mobile-menu__contacts">
-              <ul class="list">
-                <li>
-                  <a href="tel:+380961111111" class="link mobile-menu--tel">
-                    +38 096 111 11 11
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:info@devstudio.com"
-                    class="link mobile-menu--mail"
-                  >
-                    info@devstudio.com
-                  </a>
-                </li>
-              </ul>
-              <ul class="list mobile-menu__social-list">
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Instagram</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Twitter</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >Facebook</a
-                  >
-                </li>
-                <li class="social-list__item">
-                  <a href="" class="link" rel="noreferrer noopener nofollow"
-                    >LinkedIn</a
-                  >
-                </li>
-              </ul>
-            </div>
+            <ul class="list mobile-menu__social-list">
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social-list__item">
+                <a href="" class="link" rel="noreferrer noopener nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -163,12 +157,20 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-1@2x.jpg 2x"
-                    src="./images/img-project-1.jpg"
-                    alt="Технокряк"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-1.jpg    1x,
+                        ./images/project-1@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-1.jpg"
+                      alt="Технокряк"
+                      class="thumb-description__img"
+                    />
+                  </picture>
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -192,12 +194,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-2@2x.jpg 2x"
-                    src="./images/img-project-2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-2.jpg    1x,
+                        ./images/project-2@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-2.jpg"
+                      alt="Постер New Orlean vs
+                  Golden Star"
+                      class="thumb-description__img"
+                    />
+                  </picture>
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -223,12 +234,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-3@2x.jpg 2x"
-                    src="./images/img-project-3.jpg"
-                    alt="Ресторан Seafood"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-3.jpg    1x,
+                        ./images/project-3@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-3.jpg"
+                      alt="Ресторан Seafood"
+                      class="thumb-description__img"
+                    />
+                  </picture>
+
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -252,12 +272,20 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-4@2x.jpg 2x"
-                    src="./images/img-project-4.jpg"
-                    alt="Проект Prime"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-4.jpg    1x,
+                        ./images/project-4@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-4.jpg"
+                      alt="Проект Prime"
+                      class="thumb-description__img"
+                    />
+                  </picture>
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -281,12 +309,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-5@2x.jpg 2x"
-                    src="./images/img-project-5.jpg"
-                    alt="Проект Boxes"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-5.jpg    1x,
+                        ./images/project-5@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-5.jpg"
+                      alt="Проект Boxes"
+                      class="thumb-description__img"
+                    />
+                  </picture>
+
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -310,12 +347,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-6@2x.jpg 2x"
-                    src="./images/img-project-6.jpg"
-                    alt="Inspiration has no Border"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-6.jpg    1x,
+                        ./images/project-6@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-6.jpg"
+                      alt="Inspiration has no Border"
+                      class="thumb-description__img"
+                    />
+                  </picture>
+
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -341,12 +387,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-7@2x.jpg 2x"
-                    src="./images/img-project-7.jpg"
-                    alt="Видавництво Limited Edition"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-7.jpg    1x,
+                        ./images/project-7@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-7.jpg"
+                      alt="Видавництво Limited Edition"
+                      class="thumb-description__img"
+                    />
+                  </picture>
+
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -372,12 +427,21 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-8@2x.jpg 2x"
-                    src="./images/img-project-8.jpg"
-                    alt="Проект LAB"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-8.jpg    1x,
+                        ./images/project-8@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-8.jpg"
+                      alt="Проект LAB"
+                      class="thumb-description__img"
+                    />
+                  </picture>
+
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -401,12 +465,20 @@
                 rel="noopener noreferrer nofollow"
               >
                 <div class="thumb-description">
-                  <img
-                    srcset="./images/project-9@2x.jpg 2x"
-                    src="./images/img-project-9.jpg"
-                    alt="Growing Business"
-                    class="thumb-description__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-9.jpg    1x,
+                        ./images/project-9@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project-9.jpg"
+                      alt="Growing Business"
+                      class="thumb-description__img"
+                    />
+                  </picture>
                   <div class="project-description">
                     <p class="project-description-content">
                       Ресурс предлагает комплексные предложения с разным уровнем

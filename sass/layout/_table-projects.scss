@@ -1,13 +1,9 @@
 .project {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-
   @include device(tab) {
     --count-card: 2;
     flex-direction: row;
     &__item:nth-child(odd) {
-      margin-left: 25px;
+      // margin-left: 25px;
     }
   }
 
@@ -17,18 +13,20 @@
 }
 
 .link__project {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   @include device(mob) {
-    width: 450px;
+    // width: 450px;
   }
 
   @include device(tab) {
-    width: 355px;
+    // width: 355px;
   }
 
   @include device(desk) {
-    width: 370px;
+    // width: 370px;
   }
 
   transition-duration: 250ms;
@@ -45,6 +43,7 @@
 .project-content {
   padding: 20px 25px;
   border: solid 1px #ececec;
+  flex-grow: 1;
 
   &__title {
     font-size: 18px;
@@ -67,14 +66,26 @@
 
   color: var(--white-color);
 
+  opacity: 0;
+  overflow: auto;
+
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 60px 25px;
+  padding: 75px 25px;
+
+  @include device(tab) {
+    padding: 50px 25px;
+  }
+
+  @include device(desk) {
+    padding: 60px 25px;
+  }
+
   transform: translateY(100%);
   transition-duration: 250ms;
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-timing-function: var(--time-func-cubic);
 }
 
@@ -89,5 +100,6 @@
 
 .link__project:hover .project-description,
 .link__project:focus .project-description {
+  opacity: 1;
   transform: translateY(0);
 }
